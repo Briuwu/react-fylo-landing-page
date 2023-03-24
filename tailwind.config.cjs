@@ -17,6 +17,21 @@ module.exports = {
       fontFamily: {
         raleway: "Raleway, sans-serif",
       },
+      width: {
+        "clamp-logo": "clamp(100px, 12vw, 176px)",
+      },
+      padding: {
+        "clamp-nav": "clamp(16px, 8vw, 75px)",
+      },
+      fontSize: {
+        "clamp-size": "clamp(.875rem, 2vw, 1rem)",
+        "clamp-24-40": ["clamp(1.5rem, 3vw, 2.5rem)", "150%"],
+        "clamp-14-20": ["clamp(0.875rem, 1.5vw, 1.25rem)", "150%"],
+        "clamp-18-32": ["clamp(1.125rem, 2.5vw, 2rem)", "150%"],
+      },
+      spacing: {
+        "clamp-list": "clamp(.5rem, 5vw, 3.75rem)",
+      },
     },
   },
   plugins: [],
