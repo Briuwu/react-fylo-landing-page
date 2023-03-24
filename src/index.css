@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  body {
+    font-size: 0.875rem;
+    background-color: theme("colors.dark-blue-intro");
+    color: white;
+  }
+
+  :is(a, button, input, textarea, select, details, summary):focus-visible {
+    outline: white solid 0.188rem;
+    outline-offset: 0.188rem;
+  }
+
+  :is(
+      a,
+      button,
+      input,
+      textarea,
+      select,
+      details,
+      summary
+    )[aria-invalid="true"] {
+    outline-color: theme("colors.light-red");
+  }
+}
