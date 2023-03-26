@@ -5,6 +5,7 @@
 @layer base {
   html {
     font-family: "Open Sans", sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -44,5 +45,17 @@
     height: 1px;
     width: 150px;
     bottom: -5px;
+  }
+
+  .quote::before {
+    content: "";
+    display: block;
+    background: url(./images/bg-quotes.png) no-repeat center;
+    position: absolute;
+    height: 12.5rem;
+    width: 4.9375rem;
+    left: -1.3rem;
+    top: -7rem;
+    z-index: -1;
   }
 }

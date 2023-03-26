@@ -32,6 +32,10 @@ module.exports = {
       spacing: {
         "clamp-list": "clamp(.5rem, 5vw, 3.75rem)",
       },
+
+      gridTemplateColumns: {
+        cards: "max-content 1fr",
+      },
     },
   },
   plugins: [],
