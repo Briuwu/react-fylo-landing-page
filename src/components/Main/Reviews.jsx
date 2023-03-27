@@ -29,7 +29,10 @@ const reviewsData = [
 
 const Reviews = () => {
   const reviewsElements = reviewsData.map((el) => (
-    <figure className="grid grid-cols-cards items-center gap-y-4 gap-x-2 rounded-md bg-dark-blue-testimonials px-6 pt-12 pb-4">
+    <figure
+      key={el.id}
+      className="grid grid-cols-cards items-center gap-y-4 gap-x-2 rounded-md bg-dark-blue-testimonials px-6 pt-12 pb-4"
+    >
       <figcaption>
         <img src={el.avatar} alt={el.name} className="w-6 rounded-full" />
       </figcaption>
@@ -44,7 +47,7 @@ const Reviews = () => {
   ));
 
   return (
-    <section className="quote relative mx-auto my-40 grid max-w-6xl gap-10 lg:grid-cols-3">
+    <section className="quote relative mx-auto my-40 grid max-w-6xl gap-10 px-10 lg:grid-cols-3 lg:px-0">
       {reviewsElements}
     </section>
   );

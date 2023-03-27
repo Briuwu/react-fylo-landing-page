@@ -35,6 +35,8 @@ module.exports = {
 
       gridTemplateColumns: {
         cards: "max-content 1fr",
+        contact: "2fr .80fr",
+        footer: "1fr 1fr 1fr 1fr",
       },
     },
   },

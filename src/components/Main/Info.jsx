@@ -2,7 +2,7 @@ import React from "react";
 
 const Info = () => {
   return (
-    <section className="my-32 grid place-items-center gap-4 md:grid-cols-2">
+    <section className="mx-auto my-32 grid max-w-[1440px] place-items-center px-16 md:grid-cols-2">
       <img
         src="./images/illustration-stay-productive.png"
         alt="Stay productive Image"

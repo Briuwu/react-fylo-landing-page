@@ -1,3 +1,4 @@
+import Footer from "./components/Footer/Footer";
 import Hero from "./components/Header/Hero";
 import Navbar from "./components/Header/Navbar";
 import Cards from "./components/Main/Cards";
@@ -9,11 +10,12 @@ export default function App() {
     <>
       <Navbar />
       <Hero />
-      <main className="mx-auto my-40 max-w-[1440px] px-10">
+      <main className="curve relative mt-40 bg-dark-blue-main pb-52">
         <Cards />
         <Info />
         <Reviews />
       </main>
+      <Footer />
     </>
   );
 }

@@ -50,12 +50,30 @@
   .quote::before {
     content: "";
     display: block;
-    background: url(./images/bg-quotes.png) no-repeat center;
+    background: url("./images/bg-quotes.png") no-repeat center;
     position: absolute;
     height: 12.5rem;
     width: 4.9375rem;
     left: -1.3rem;
     top: -7rem;
     z-index: -1;
+  }
+
+  .curve::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 8.8125rem;
+    background: url(./images/bg-curvy-mobile.svg) no-repeat bottom / 100% 100%;
+    z-index: -1;
+    top: -8.8125rem;
+  }
+
+  @screen lg {
+    .curve::before {
+      height: 28.0625rem;
+      top: -25.625rem;
+      background-image: url(./images/bg-curvy-desktop.svg);
+    }
   }
 }
