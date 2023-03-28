@@ -4,7 +4,7 @@ import { fadeVariants, container } from "../../utils/motion";
 
 const Hero = () => {
   return (
-    <motion.div
+    <motion.section
       variants={container}
       initial="hidden"
       whileInView="visible"
@@ -40,7 +40,7 @@ const Hero = () => {
       >
         Get Started
       </motion.a>
-    </motion.div>
+    </motion.section>
   );
 };
 
