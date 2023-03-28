@@ -13,7 +13,7 @@ const socialsLogo = [
 const Footer = () => {
   return (
     <footer className="relative bg-dark-blue-footer">
-      <div className="absolute w-full -translate-y-36">
+      <div className="absolute w-full -translate-y-56 lg:-translate-y-36">
         <Contact />
       </div>
       <div className="mx-auto grid max-w-7xl items-start gap-8 p-4 pt-48">

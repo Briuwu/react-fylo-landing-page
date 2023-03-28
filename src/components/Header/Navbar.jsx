@@ -11,7 +11,7 @@ const Navbar = () => {
 
       <ul className=" flex gap-clamp-list text-clamp-size">
         {listItems.map((el) => (
-          <li key={el}>
+          <li className="hover:font-bold hover:underline" key={el}>
             <a href={`#${el}`}>{el}</a>
           </li>
         ))}

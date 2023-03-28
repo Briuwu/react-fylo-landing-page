@@ -19,7 +19,10 @@ const Info = () => {
           Securely share files and folders with friends, family and colleagues
           for live collaboration. No email attachments required.
         </p>
-        <a href="#" className="link relative flex items-center gap-2 text-cyan">
+        <a
+          href="#"
+          className="link relative flex items-center gap-2 text-cyan hover:text-white"
+        >
           See how Fylo works <img src="./images/icon-arrow.svg" alt="" />
         </a>
       </div>

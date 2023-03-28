@@ -41,7 +41,7 @@ const Contact = () => {
         </div>
         <button
           type="submit"
-          className="bg-gradient mt-4 w-full rounded-full p-4 lg:mt-0"
+          className="bg-gradient mt-4 w-full rounded-full p-4 font-bold lg:mt-0"
         >
           Get Started For Free
         </button>
