@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { container, fadeVariants } from "../../utils/motion";
 
 const reviewsData = [
   {
@@ -29,7 +31,8 @@ const reviewsData = [
 
 const Reviews = () => {
   const reviewsElements = reviewsData.map((el) => (
-    <figure
+    <motion.figure
+      variants={fadeVariants("down", 0.2 * el.id, 0.8)}
       key={el.id}
       className="grid grid-cols-cards items-center gap-y-4 gap-x-2 rounded-md bg-dark-blue-testimonials px-6 pt-12 pb-4"
     >
@@ -43,13 +46,19 @@ const Reviews = () => {
       <blockquote className="col-span-2 row-span-full">
         <p>{el.review}</p>
       </blockquote>
-    </figure>
+    </motion.figure>
   ));
 
   return (
-    <section className="quote relative mx-auto my-40 grid max-w-6xl gap-10 px-10 lg:grid-cols-3 lg:px-0">
+    <motion.section
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, threshold: 0.8 }}
+      className="quote relative mx-auto my-40 grid max-w-6xl gap-10 px-10 lg:grid-cols-3 lg:px-0"
+    >
       {reviewsElements}
-    </section>
+    </motion.section>
   );
 };
 

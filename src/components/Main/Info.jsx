@@ -1,13 +1,25 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { container, fadeVariants } from "../../utils/motion";
 
 const Info = () => {
   return (
-    <section className="mx-auto my-32 grid max-w-[1440px] place-items-center px-16 md:grid-cols-2">
-      <img
+    <motion.section
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, threshold: 0.8 }}
+      className="mx-auto my-32 grid max-w-[1440px] place-items-center px-16 md:grid-cols-2"
+    >
+      <motion.img
+        variants={fadeVariants("right", 0.2, 0.8)}
         src="./images/illustration-stay-productive.png"
         alt="Stay productive Image"
       />
-      <div className="grid max-w-xl gap-4">
+      <motion.div
+        variants={fadeVariants("left", 0.2, 0.8)}
+        className="grid max-w-xl gap-4"
+      >
         <h3 className=" max-w-md text-clamp-24-40 font-bold">
           Stay productive, wherever you are
         </h3>
@@ -25,8 +37,8 @@ const Info = () => {
         >
           See how Fylo works <img src="./images/icon-arrow.svg" alt="" />
         </a>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

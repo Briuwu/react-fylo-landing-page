@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { container, fadeVariants } from "../../utils/motion";
 
 const cardsData = [
   {
@@ -33,19 +35,29 @@ const cardsData = [
 
 const cardsElements = cardsData.map((el) => {
   return (
-    <div key={el.id} className="grid max-w-sm gap-5">
+    <motion.div
+      variants={fadeVariants("down", 0.2 * el.id, 0.8)}
+      key={el.id}
+      className="grid max-w-sm gap-5"
+    >
       <img className="mx-auto" src={el.img} alt={el.title} />
       <h2 className="text-lg font-bold">{el.title}</h2>
       <p>{el.description}</p>
-    </div>
+    </motion.div>
   );
 });
 
 const Cards = () => {
   return (
-    <section className="mx-auto grid max-w-4xl grid-flow-row place-items-center gap-24 text-center md:grid-cols-2">
+    <motion.section
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, threshold: 1 }}
+      className="mx-auto grid max-w-4xl grid-flow-row place-items-center gap-24 text-center md:grid-cols-2"
+    >
       {cardsElements}
-    </section>
+    </motion.section>
   );
 };
 

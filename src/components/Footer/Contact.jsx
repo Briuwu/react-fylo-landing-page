@@ -1,5 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
+import { container, zoomVariants } from "../../utils/motion";
 
 const Contact = () => {
   const {
@@ -10,7 +12,13 @@ const Contact = () => {
 
   const onSubmit = (data) => console.log(data);
   return (
-    <div className="mx-auto grid max-w-[55rem] gap-8 rounded-md bg-dark-blue-intro p-8 pb-10 text-center shadow-lg">
+    <motion.div
+      variants={zoomVariants(0.2, 0.8)}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, threshold: 0.8 }}
+      className="mx-auto grid max-w-[55rem] gap-8 rounded-md bg-dark-blue-intro p-8 pb-10 text-center shadow-lg"
+    >
       <div className="mx-auto grid max-w-2xl gap-4 px-4">
         <h4 className=" text-clamp-18-32 font-bold">Get early access today</h4>
         <p className="text-clamp-size">
@@ -46,7 +54,7 @@ const Contact = () => {
           Get Started For Free
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 };
 
