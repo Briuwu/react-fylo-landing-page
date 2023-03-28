@@ -10,7 +10,8 @@ export default function App() {
     <>
       <Navbar />
       <Hero />
-      <main className="curve relative mt-40 bg-dark-blue-main pb-52">
+      <div className="curve relative" />
+      <main className="mt-40 bg-dark-blue-main pb-52">
         <Cards />
         <Info />
         <Reviews />
