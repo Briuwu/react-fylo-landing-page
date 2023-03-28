@@ -8,10 +8,8 @@ import Reviews from "./components/Main/Reviews";
 export default function App() {
   return (
     <>
-      <header>
-        <Navbar />
-        <Hero />
-      </header>
+      <Navbar />
+      <Hero />
       <div className="curve relative" />
       <main className="mt-40 bg-dark-blue-main pb-52">
         <Cards />

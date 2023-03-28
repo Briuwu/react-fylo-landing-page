@@ -5,6 +5,7 @@ import { fadeVariants, container } from "../../utils/motion";
 const Hero = () => {
   return (
     <motion.section
+      role="banner"
       variants={container}
       initial="hidden"
       whileInView="visible"
