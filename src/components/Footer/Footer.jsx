@@ -6,9 +6,9 @@ const navigations = ["About Us", "Jobs", "Press", "Blog"];
 const navigations2 = ["Contact Us", "Terms", "Privacy"];
 
 const socialsLogo = [
-  "./images/facebook-f.svg",
-  "./images/instagram.svg",
-  "./images/twitter.svg",
+  { img: "./images/facebook-f.svg", name: "facebook" },
+  { img: "./images/instagram.svg", name: "instagram" },
+  { img: "./images/twitter.svg", name: "twitter" },
 ];
 const Footer = () => {
   return (
@@ -68,15 +68,16 @@ const Footer = () => {
           </nav>
           <nav aria-label="Social">
             <ul className="flex items-center justify-center gap-4">
-              {socialsLogo.map((img, index) => (
+              {socialsLogo.map((el, index) => (
                 <li key={index} className="rounded-full border p-2">
                   <a href="#">
                     <img
                       className="aspect-square w-4"
-                      src={img}
+                      src={el.img}
                       alt=""
                       role="presentation"
                     />
+                    <span className="sr-only">{el.name}</span>
                   </a>
                 </li>
               ))}
