@@ -50,7 +50,7 @@ const Reviews = () => {
   ));
 
   return (
-    <motion.section
+    <motion.div
       variants={container}
       initial="hidden"
       whileInView="visible"
@@ -58,7 +58,7 @@ const Reviews = () => {
       className="quote relative mx-auto my-40 grid max-w-6xl gap-10 px-10 lg:grid-cols-3 lg:px-0"
     >
       {reviewsElements}
-    </motion.section>
+    </motion.div>
   );
 };
 
